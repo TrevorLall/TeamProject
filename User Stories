@@ -116,6 +116,8 @@ Conversation:
 Conformity: when logged out all privileges are taken away
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 Logging System 
 -The loggin system facilitates the process of checking out and it allows us to ensure the security of the application. Only registered users may log in.
@@ -130,6 +132,19 @@ user registration:
     INSERT INTO users (u_name, pass) VALUES ($username, SHA1($pass));
   -If no existing username is the same as the newly registered username, the user will be registered, else the user will be prompt an error message.
 
-Commenting System	> facilitates 
-Checking out System >	?
+Commenting System
+- The commenting system allows interection between the members of the website. (not sure if that is an alright explanation?) 
+
+Checking out System
+- The checkout system facilitates the procedures of a checkout, it ensure security of the user's personal information. 
+
+Creation Systems
+a) Registration (for users)
+- If a non-member want to checkout or leave a comment, they must become a registered member. Which will be done through a registration which will take all of the user's information and be placed in the database. 
+
+b) Products (for admin)
+- As admin, they are able to create products to be shown to the users. This will be done through a short of registration form containing the information required. 
+
+Email System (for admin)
+- The email system allows the admin to get the users information and their email, which are all stored in the database.
 
