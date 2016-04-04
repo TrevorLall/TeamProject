@@ -117,7 +117,19 @@ Conformity: when logged out all privileges are taken away
 
 
 
-Logging System	> facilitates the process of checking out. Only members are allowed to purchase items
+Logging System 
+-The loggin system facilitates the process of checking out and it allows us to ensure the security of the application. Only registered users may log in.
+logging in:
+  -Use this database query to validate the user
+    SELECT * FROM users WHERE username = $username AND pass = $pass;
+  -If the result returns one row, the user_id will be stored in a session variable to indicate that the user is logged in.
+logging out:
+  -To log the user out: clear the user session variable.
+user registration:
+  -Use this query to perform the registration for new user
+    INSERT INTO users (u_name, pass) VALUES ($username, SHA1($pass));
+  -If no existing username is the same as the newly registered username, the user will be registered, else the user will be prompt an error message.
+
 Commenting System	> facilitates 
 Checking out System >	?
 
