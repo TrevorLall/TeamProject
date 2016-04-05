@@ -49,7 +49,7 @@ Conformity: all comments will be inserted into the database under the users id
 
 Card: A user can contact the admin for any questions
 Conversation: users can email the admin; they must be logged in in order to do so.
-Conformity: all emails will be sent to the admin and inserted into the database under the users id
+Conformity: all emails will be sent to the admin
 
 Card: A user can logout
 Conversation: the user can logout
@@ -133,18 +133,15 @@ user registration:
   -If no existing username is the same as the newly registered username, the user will be registered, else the user will be prompt an error message.
 
 Commenting System
-- The commenting system allows interection between the members of the website. (not sure if that is an alright explanation?) 
+-The commenting system allows users to leave comments in each product's comment section using the following insert query
+ INSERT INTO review (u_id, p_id, message) VALUES ($user_id, $product_id, $message);
 
-Checking out System
-- The checkout system facilitates the procedures of a checkout, it ensure security of the user's personal information. 
+Check out System
+-The check out system lets the user to enter the shipment address and credit cart information. 
+-We decide to not keep this information inside the database for security purposes.
 
-Creation Systems
-a) Registration (for users)
-- If a non-member want to checkout or leave a comment, they must become a registered member. Which will be done through a registration which will take all of the user's information and be placed in the database. 
+Admin System
+-The admin will be able to create and modify products to be shown to the users. 
+-This will be done through a short of modification form and run through the corresponding insert or update query.
 
-b) Products (for admin)
-- As admin, they are able to create products to be shown to the users. This will be done through a short of registration form containing the information required. 
-
-Email System (for admin)
-- The email system allows the admin to get the users information and their email, which are all stored in the database.
-
+MUHAHAHAHAH
