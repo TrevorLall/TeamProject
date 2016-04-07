@@ -1,0 +1,3 @@
+1. We created a new table named language, then created a sequence that would populate the surrogate keys to start at the last inputed language. We then imported the language data from the text file. For the costumer Robert De Niro, her preferred language does not exist in the language table.
+
+2. The issues related to natural keys, or multi-column keys that we came across when addressing the database tables are that many of them are not easily identified by their natural/multi-column keys, so when joining tables it makes it more difficult, and not a great choice for large scale database systems. The situation is rectified by creating surrogate keys for them, we made the database design easier to implement, its minimal and is stable over time.
