@@ -4,4 +4,4 @@
 
   There was a case where we had to make a sequence for a table which populates a surrogate key which replaces the original primary in a table, where their original primary key was a type varchar2. So we had to create a column, who is numeric type, which holds a unique id that will be the pirmary key for that table. We also created a trigger that uses a sequence to populate that column.
   
-  Another case,  where we had to make a sequence for a table which populates a surrogate key which replaces the original primary in a table, where their original primary key was a multi-column key. So we, had to 
+  Another case,  where we had to make a sequence for a table which populates a surrogate key which replaces the original primary in a table, where their original primary key was a multi-column key. So we, had to create a constraint where both must be unique together in order to be inserted into the table. 
