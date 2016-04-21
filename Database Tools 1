@@ -5,3 +5,11 @@
   There was a case where we had to make a sequence for a table which populates a surrogate key which replaces the original primary in a table, where their original primary key was a type varchar2. So we had to create a column, who is numeric type, which holds a unique id that will be the pirmary key for that table. We also created a trigger that uses a sequence to populate that column.
   
   Another case,  where we had to make a sequence for a table which populates a surrogate key which replaces the original primary in a table, where their original primary key was a multi-column key. So we, had to create a constraint where both must be unique together in order to show the uniqueness of each row.
+
+Q3. Fields of which datatypes are candidates for conversion to lookup tables?
+The most common candidates for lookup tables are typically VARCHAR2 and CHAR.
+
+Q4. Which fields should be converted to lookup tables?
+	Customer (marital_status, gender, income_level)
+	Product Information (product_status)
+	Orders (order_mode)
