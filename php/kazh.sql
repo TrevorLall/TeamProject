@@ -7,10 +7,8 @@ CREATE TABLE users
 (
 u_id INT AUTO_INCREMENT PRIMARY KEY,
 u_name VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL UNIQUE,
-pass CHAR(40) NOT NULL
+pass CHAR(60) NOT NULL
 );
-
-INSERT INTO users (u_name, pass) VALUES ('admin', SHA1('admin'));
 
 CREATE TABLE product
 (
