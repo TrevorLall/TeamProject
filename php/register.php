@@ -11,7 +11,7 @@ if (isset($_SESSION['UID'])){
 	}
 	//Redirect to admin.php if it's admin
 	else {
-		$url = "admin.php";
+		$url = "admin_add.php";
 		header("Location: $url");	
 	}
 }
