@@ -36,9 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 
 <body>
-	<a href="admin_delete.php">Delete Item</a>
-	<a href="admin_update.php">Update Item</a>
-	<a href="process_logout.php">Logout</a>
+	<a href="admin_delete.jsp">Delete Item</a>
+	<a href="admin_update.jsp">Update Item</a>
+	<a href="process_logout.jsp">Logout</a>
 	<hr /> <br />
 	
 	<form action="" method="post" id="add">
