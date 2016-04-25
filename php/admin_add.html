@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Kazh Anime</title>
+    <link href="admin_add.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="admin_add.js"></script>
+</head>
+
+<body>
+	<form action="" method="post" id="add">
+        <div id="links">
+            <a href="#" class="links1">Home Page</a>
+            <a href="admin_add.html">Add Item</a>
+            <a href="admin_update.html">Update Item</a>
+            <a href="admin_delete.html">Delete Item</a>
+        </div>
+		
+		<!-- <div class="banner">
+			<img src="banner.jpg" id="banner" alt="KaZh.com" width="728" height="90"> 
+		</div> -->
+		
+        <div id="addMain">
+            <table>
+                <tr>
+                    <td>Anime Name:</td>
+                    <td><input type="text" name="name" required /></td>
+                </tr>
+                <tr>
+                    <td>Anime Description:</td>
+                    <td><textarea rows="5" cols="40" form="add" name="desc" placeholder="Item Description"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Anime Genre</td>
+                    <td class="dropdownG">
+                        <select name="genre" id="genre" required>
+                            <option value="" disabled selected>- Select Genre -</option>
+                            <option value="action">Action</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="demons">Demons</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="game">Game</option>
+                            <option value="historical">Historical</option>
+                            <option value="horror">Horror</option>
+                            <option value="love/romance">Love/Romance</option>
+                            <option value="magic">Magic</option>
+                            <option value="music">Music</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="psychological">Psychological</option>
+                            <option value="sci-fi">Sci-Fi</option>
+                            <option value="sports">Sports</option>
+                            <option value="supernatural">Supernatural</option>
+                            <option value="vampire">Vampire</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anime Price:</td>
+                    <td>$ <input type="number" name="price" min="0" max="9999" step="0.01" size="4" required/></td>
+                </tr>
+                <tr>
+                    <td>QoH:</td>
+                    <td><input type="number" name="qoh" min="1" max="50" required /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="button">Add</button></td>
+                </tr>
+            </table>
+        </div>
+	</form>
+</body>
+</html>
