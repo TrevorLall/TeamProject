@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 <html>
 <head>
 	<title>Kazh Anime</title>
+	<link href="css/admin.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -50,6 +51,7 @@ try {
 			<tr>
 				<th>Name</th>
 				<th>Description</th>
+				<th>Genre</th>
 				<th>Price</th>
 				<th>QoH</th>
 				<th></th>
@@ -57,6 +59,7 @@ try {
 			<tr align="center">
 				<td><?php echo $row['p_name']; ?></td>
 				<td><?php echo $row['p_desc']; ?></td>
+				<td><?php echo $row['genre']; ?></td>
 				<td>$<?php echo $row['price']; ?></td>
 				<td><?php echo $row['qoh']; ?></td>
 				<td><input type="submit" value="Delete"></td>

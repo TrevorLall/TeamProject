@@ -1,5 +1,4 @@
 DROP TABLE cart;
-DROP TABLE review;
 DROP TABLE users;
 DROP TABLE product;
 
@@ -14,9 +13,11 @@ CREATE TABLE product
 (
 p_id INT AUTO_INCREMENT PRIMARY KEY,
 p_name VARCHAR(50) NOT NULL,
-p_desc TEXT(300),
+p_desc TEXT(500),
+genre VARCHAR(20),
 price FLOAT(6,2) NOT NULL,
-qoh INT NOT NULL
+qoh INT NOT NULL,
+image LONGBLOB NOT NULL
 );
 
 CREATE TABLE cart
@@ -24,17 +25,6 @@ CREATE TABLE cart
 c_id INT AUTO_INCREMENT PRIMARY KEY,
 u_id INT NOT NULL,
 p_id INT NOT NULL,
-quantity INT,
-FOREIGN KEY (u_id) REFERENCES users (u_id),
-FOREIGN KEY (p_id) REFERENCES product (p_id)
-);
-
-CREATE TABLE review
-(
-r_id INT AUTO_INCREMENT PRIMARY KEY,
-u_id INT NOT NULL,
-p_id INT NOT NULL,
-msg TEXT(1000) NOT NULL,
 FOREIGN KEY (u_id) REFERENCES users (u_id),
 FOREIGN KEY (p_id) REFERENCES product (p_id)
 );

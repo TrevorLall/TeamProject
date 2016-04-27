@@ -15,7 +15,42 @@ if (isset($_SESSION['UID'])){
 		header("Location: $url");	
 	}
 }
+?>
+
+<html>
+<head>
+	<title>Log In</title>
 	
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">Kazh <span>Anime</span></span></h1>
+		</div>
+		
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+			</div>
+			<form action="" method="POST">
+				<label for="username">Username</label> <br/>
+				<input type="text" name="username" required /> <br />
+				<label for="password">Password</label> <br />
+				<input type="password" name="password" required /> <br />
+				<button type="submit">Sign In</button>
+				<a href="register.php"><p class="small">Register</p></a>
+				<br />
+			</form>
+<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	$username = $_POST['username'];
@@ -57,18 +92,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 }
 ?>
-
-<html>
-<head>
-	<title>Log In</title>
-</head>
-
-<body>
-	<form action="" method="post">
-		Username: <input type="text" name="username" required /> <br />
-		Password: <input type="password" name="password" required /> <br />
-		<input type="submit" value="login" />
-		<a href="register.php">Register</a>
-	</form>
+		</div>
+	</div>
 </body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
 </html>
