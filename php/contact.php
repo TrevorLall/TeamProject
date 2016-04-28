@@ -4,9 +4,6 @@
 <title>KaZh</title>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
 <link rel="stylesheet" type="text/css" href="css/index/style.css" />
-<!--[if IE 6]>
-<link rel="stylesheet" type="text/css" href="iecss.css" />
-<![endif]-->
 </head>
     
 <body>
@@ -15,7 +12,7 @@
         <div id="header">
             <!-- Logo -->
             <div id="logo"> 
-            <a href="#"><img src="images/banner.jpg" alt="" border="0" width="940" height="140" /></a> 
+            <a href=""><img src="images/banner.jpg" alt="" border="0" width="940" height="140" /></a> 
             </div>
         </div>
     
@@ -26,17 +23,13 @@
             <ul class="menu">
                 <li><a href="index.php" class="nav1">Home</a></li>
                 <li class="divider"></li>
-                <li><a href="aboutus.html" class="nav2">About Us</a></li>
+                <li><a href="" class="nav2">About Us</a></li>
                 <li class="divider"></li>
-                <li><a href="register.php" class="nav3">My Account</a></li>
-                <li class="divider"></li>
-                <li><a href="" class="nav4">Sign Up</a></li>
+                <li><a href="" class="nav3">My Account</a></li>
                 <li class="divider"></li>
                 <li><a href="" class="nav5">Shipping</a></li>
                 <li class="divider"></li>
-                <li><a href="contact.html" class="nav5">Contact Us</a></li>
-                <li class="divider"></li>
-                <li><a href="#" class=""></a></li>
+                <li><a href="" class="nav5">Contact Us</a></li>
                 <li class="divider"></li>
                 <li class="currencies">Currencies
                   <select>
@@ -74,8 +67,8 @@
                 </ul>
                 <div class="title_box">Special Products</div>
                 <div class="border_box">
-                    <div class="product_title"><a href="details.html">Card Captors Volume 4</a></div>
-                    <div class="product_img"><a href="details.html"><img src="images/cardcaptors1.jpg" width="190" height="200" alt="" border="0" /></a></div>
+                    <div class="product_title"><a href="">Card Captors Volume 4</a></div>
+                    <div class="product_img"><a href=""><img src="images/cardcaptors1.jpg" width="190" height="200" alt="" border="0" /></a></div>
                     <div class="prod_price"><span class="reduce">30$</span> <span class="price">15$</span></div>
                 </div>
         </div>
@@ -83,18 +76,11 @@
     
       <!-- center content -->
       <div class="center_content">
-          <div class="center_title_bar">Contact Us</div>
+          <div class="center_title_bar"></div>
             <form>
                 <table>
                     <tr>
-                        <td colspan="2"><center><p style="font-size:14px;">If you would like to contact us, you must first register to be a member if you are not a member yet. Then, leave you will be able to leave a message and we will do our best to get back to you as quickly as possible.</p></center></td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td></td>
-                        <td><a href="login.php">Sign In</a> &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="register.php">Register Today</a></td>
-                        <td></td>
+                        <td colspan="2"><center><p style="font-size:14px;">Leave your feedback below. It will be sent to the administrator and will be processed ASAP.</p></center></td>
                     </tr>
                     <tr>
                         <td>Subject: </td>
@@ -110,27 +96,18 @@
                     </tr>
                 </table>
             </form>
+			<div class="banner_adds"><img src="images/onepiece.gif" alt="" height="170" border="0" /></div>
         </div>
         <!-- end of center content -->
         <div class="right_content">
-            <div class="shopping_cart">
-                <div class="cart_title">Shopping cart</div>
-                <div class="cart_details"> 3 items <br />
-                    <span class="border_cart"></span> Total: <span class="price">350$</span> 
-                </div>
-                <div class="cart_icon">
-                    <a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]">   <img src="images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a>
-                </div>
-                <!-- ^ should be done or not? :o -->
-            </div>
         <div class="title_box">What's new</div>
         <div class="border_box">
-            <div class="product_title"><a href="details.html">Card Captors Volume 4</a></div>
-            <div class="product_img"><a href="details.html"><img src="images/cardcaptors2.jpg" width="150" height="150" alt="" border="0" /></a>
+            <div class="product_title"><a href="">Card Captors Volume 4</a></div>
+            <div class="product_img"><a href=""><img src="images/cardcaptors2.jpg" width="150" height="150" alt="" border="0" /></a>
             </div>
             <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
         </div>
-        <div class="banner_adds"> <a href="#"><img src="images/add5.jpg" alt="" width="190" border="0" /></a></div>
+        <div class="banner_adds"> <a href=""><img src="images/add5.jpg" alt="" width="190" border="0" /></a></div>
         </div>
     </div>
     <!-- end of main content -->

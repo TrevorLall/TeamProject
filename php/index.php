@@ -45,13 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <ul class="menu">
                     <li><a href="index.php" class="nav1">Home</a></li>
                     <li class="divider"></li>
-                    <li><a href="aboutus.html" class="nav2">About Us</a></li>
+                    <li><a href="" class="nav2">About Us</a></li>
                     <li class="divider"></li>
                     <li><a href="" class="nav3">My Account</a></li>
                     <li class="divider"></li>
                     <li><a href="" class="nav5">Shipping</a></li>
                     <li class="divider"></li>
-                    <li><a href="contact.html" class="nav5">Contact Us</a></li>
+                    <li><a href="contact.php" class="nav5">Contact Us</a></li>
                     <li class="divider"></li>
                     <li class="currencies">Currencies
                       <select>
@@ -189,6 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     <!-- right content -->
     <div class="right_content">
+	<br /><br />
 		<?php
 		if (isset($_SESSION['UID'])){
 			$u_id = $_SESSION['UID'];
@@ -198,13 +199,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$row = $STH->fetch();
 		?>
         <div class="shopping_cart">
-            <div class="cart_title">Shopping cart</div>
-            <div class="cart_details"> <?php echo $row['item']; ?> items <br />
-                <span class="border_cart"></span> Total: <span class="price"><?php echo $row['total']; ?>$</span> </div>
+			<div class="cart_title" style="font-size:20px">Shopping cart</div><br />
+			<div class="cart_details" style="font-size:15px"> <?php echo $row['item']; ?> items <br />
+				<span class="border_cart"></span> Total: <span class="price"><?php echo $row['total']; ?>$</span> </div>
                 <div class="cart_icon">
-                    <a href=""><img src="images/cart.jpg" alt="" width="48" height="48" border="0" /></a>
+                    <a href="" style="pointer-events: none; cursor: default;"><img src="images/cart.jpg" alt="" width="48" height="48" border="0" /></a>
                 </div>
-				<form action="" method="post">
+				<form action="checkout.php" method="post">
 					<input type="hidden" name="id" value="<?php echo $u_id; ?>" />
 					<input type="submit" value="Checkout" />
 				</form>
@@ -212,14 +213,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		<?php
 		}
 		?>
-		<br /><br /><br /><br /><br /><hr />
+		<br /><br /><br />
+		<div class="banner_adds"><img src="images/onepiece.gif" alt="" height="150" border="0" /></div>
+		<br />
         <div class="title_box">What's new</div>
         <div class="border_box">
             <div class="product_title"><a href="details.html">Card Captors Volume 4</a></div>
             <div class="product_img"><a href="details.html"><img src="images/cardcaptors2.jpg" width="150" height="150" alt="" border="0" /></a></div>
             <div class="prod_price"><span class="reduce">38$</span> <span class="price">26$</span></div>
         </div>
-        <div class="banner_adds"> <a href="#"><img src="images/add1.jpg" alt="" width="190" border="0" /></a></div>
+        <div class="banner_adds"><img src="images/add1.jpg" alt="" width="190" border="0" /></div>
     </div>
     <!-- end of right content -->
             
