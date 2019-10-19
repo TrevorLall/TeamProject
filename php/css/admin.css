@@ -1,0 +1,32 @@
+body {
+	background-color: #22BFCE;
+}
+
+/** admin_add.html */
+#addMain {position: absolute; top: 5px; left: 120px; width: 540px}
+
+#links {position: absolute; top: 5px; left: 5px; width: 90px;  
+        font-family:Arial, Helvetica, sans-serif; font-size:11pt}
+		
+/*div.banner {
+	margin-left: 100px;
+	background-image: "banner.jpg";
+}*/
+
+#links a {color:black; text-decoration:none; display: block}
+#links a.links1 {margin-top: 10px}
+#links a:hover {color:#A6CD3C; background-color: #22BFCE}
+
+.button {
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/** admin_delete.html */
+#deleteMain {position: absolute; top: 5px; left: 120px; width: 540px;}
+
+/** admin_update.html */
+#updateMain  {position: absolute; top: 5px; left: 120px; width: 540px;}

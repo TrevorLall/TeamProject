@@ -1,0 +1,147 @@
+
+Card: The user can view a list of products when website is opened
+Conversation:  When website is prompted, the products will be populated by the products that are available according to the database.
+Conformity:  All products on the database are selected to be displayed on the view
+
+Card: When a product is clicked, the user can view product information
+Conversation: When product has been chosen, the user will view the product information according to the information placed in the database.
+Conformity: the product will be selected from the database and all its information, placed in the database, will be displayed
+
+Card: The user can search by category
+Conversation: the categories will be listed in a drop down menu populated from the database
+Conformity: 
+
+Card: A user can add DVDs to their cart   
+Conversation: When a user clicks the “add” to cart button, the products will be added to their cart.
+Conformity: the item will be added to the users cart, which will be placed in the database, as a record
+
+Card: A user can delete from their cart
+Conversation: When a user clicks the “remove” from cart button, the products will be removed from their cart.
+Conformity: if an item is removed, it will be deleted from the user’s cart in the database
+
+Card: A user can view their cart 
+Conversation: When the user clicks their cart, all DVDs added to their cart will be shown.
+Conformity: all products in the users cart will be selected and be displayed
+
+Card: A user can view their total price 
+Conversation: When the user clicks their cart, the prices of all products will be summed and be shown to the client.
+Conformity: all products in the user cart will take their prices and will be summed to be then displayed
+
+Card: A user can checkout
+Conversation: When the user clicks checkout, they will be able to input their contact information and their card information for it to be shipped to their chosen address. 
+Conformity: 
+
+Card: A user can adjust the amount of products they want to purchase
+Conversation: If the user pressed the checkout button and wants the readjust their cart, they will be able to readjust it.
+Conformity: the number of product to be purchased can be updated on the database
+
+Card: A user can login 
+Conversation: in order for the user to be logged in, they will h
+Conformity: we will compare login id and password to the one stored in the database in order for the user to be logged in
+
+Card: A user can register into a new account
+Conversation: in order for a user to checkout, they would have to have logged. However, if they do not have an account then they would have to register.
+Conformity: we will take the their information from a form and store it into a database.
+
+Card: A user can leave comments
+Conversation: users can leave comments in each product comment section, however they must be logged in, in order to leave comments.
+Conformity: all comments will be inserted into the database under the users id
+
+Card: A user can contact the admin for any questions
+Conversation: users can email the admin; they must be logged in in order to do so.
+Conformity: all emails will be sent to the admin
+
+Card: A user can logout
+Conversation: the user can logout
+Conformity: all cookies will be erased 
+
+Card: The admin can login 
+Conversation: The admin can login
+Conformity: when logged in the privileges of an admin determined by the database
+
+Card: The admin can view products
+Conversation: The whole inventory will be shown according to what’s on the database.
+Conformity: all products and product information will be selected from the database and be displayed.
+
+Card: The admin can search for products by categories
+Conversation: The whole inventory can be searched by a drop down menu where the admin can 
+Conformity: products could be found under their assigned category from the database
+
+Card: The admin can view users and users information
+Conversation: all users will be listed from the database
+Conformity: all users will be selected from the database and will be displayed
+
+Card: The admin can view users transaction history
+Conversation: the view will be populated with the user and their purchases
+Conformity: we will be selecting all users that have purchased and item and their purchased merchandise
+
+Card: The admin can create a new category
+Conversation: admin will create a new category so DVDs could be added to it 
+Conformity: adding a new category to the database table of categories
+
+Card: The admin can add products
+Conversation: adding a new product to the databases’ products
+Conformity: adding a new product will have to be done; along with its information, its price and its category
+
+Card: The admin can update the number of products by adding products
+Conversation: the number of products will be increased by the number of stock received
+Conformity: in the database we will update by adding the number of products
+
+Card: The admin can update the number of products by deleting products
+Conversation: the number of products will be decreased by the number of stock bought
+Conformity: in the database we will update by subtracting the number of products
+
+Card: The admin can delete products
+Conversation: removing completely the product, from the inventory list
+Conformity: deleting the product itself from the database
+
+Card: The admin can view comments each user has made
+Conversation: admin can view comments on each product from each user
+Conformity: comments will be added to the database 
+
+Card: The admin can answer to user comments
+Conversation: the view will be populated with messages sent to the admin, which is stored in the database
+Conformity: we will select the emails accordingly and display them with the user who sent the message
+
+Card: The admin can reply back to send messages 
+Conversation: admin will be able reply to a message sent from specific user
+Conformity: 
+
+Card: The admin can clean non-member carts
+Conversation: anonymous carts will be removed after 48 hours unattended
+Conformity: all items under that anonymous id will be deleted 
+
+Card: The admin can logout 
+Conversation: 
+Conformity: when logged out all privileges are taken away
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Logging System 
+-The loggin system facilitates the process of checking out and it allows us to ensure the security of the application. Only registered users may log in.
+logging in:
+  -Use this database query to validate the user
+    SELECT * FROM users WHERE username = $username AND pass = $pass;
+  -If the result returns one row, the user_id will be stored in a session variable to indicate that the user is logged in.
+logging out:
+  -To log the user out: clear the user session variable.
+user registration:
+  -Use this query to perform the registration for new user
+    INSERT INTO users (u_name, pass) VALUES ($username, SHA1($pass));
+  -If no existing username is the same as the newly registered username, the user will be registered, else the user will be prompt an error message.
+
+Commenting System
+-The commenting system allows users to leave comments in each product's comment section using the following insert query
+ INSERT INTO review (u_id, p_id, message) VALUES ($user_id, $product_id, $message);
+
+Check out System
+-The check out system lets the user to enter the shipment address and credit cart information. 
+-We decide to not keep this information inside the database for security purposes.
+
+Admin System
+-The admin will be able to create and modify products to be shown to the users. 
+-This will be done through a short of modification form and run through the corresponding insert or update query.
+
+MUHAHAHAHAH
